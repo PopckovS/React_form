@@ -1,0 +1,65 @@
+/*START USER-ADMIN*/
+.holder2 {
+    width: 100%;
+    max-width: 1750px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.holder-form {
+    width: 100%;
+    max-width: 930px;
+    margin: 45px auto;
+}
+
+.gallery .gallery-images {
+    margin-top: 20px
+}
+.holder-form form {
+    padding: 60px 79px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+}
+
+.holder-form label {
+    width: 100%;
+    display: block;
+    font-size: 16px;
+    line-height: 21px;
+    color: #B1B4B3;
+    margin: 0 0 13px;
+}
+
+form .row{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0 -10px;
+}
+
+form .hold-input {
+    margin: 0 0 22px;
+}
+form .row li {
+    width: 50%;
+    padding: 0 10px;
+}
+form .hold-input.error,
+form .row li.error .hold-input{
+    margin: 0 0 8px;
+}
+form .row-three li {
+    width: 33.3333%;
+}
+
+form .hold-btn {
+    display: flex;
+    justify-content: center;
+    margin: 16px -10px 0;
+}
+form .hold-checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

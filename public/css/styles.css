@@ -1,0 +1,98 @@
+
+.row {
+	margin-bottom: 1rem;
+}
+[class*="col-"] {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+hr {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+#files {
+    overflow-y: auto !important;
+    min-height: 320px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#files .row {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.delete_img {
+	width: 100px;
+	height: 26px;
+	border-radius: 13px;
+	margin: 0;
+	padding: 0;
+	/*
+	cursor: pointer;
+	color: #64B0C7;
+	border: 1px solid #64B0C7;
+
+
+	 */
+}
+@media (min-width: 768px) {
+	#files {
+		min-height: 0;
+	}
+}
+#debug {
+	overflow-y: scroll !important;
+	height: 180px;
+}
+
+.dm-uploader {
+	border: 2px dotted #8F8F8F;
+	background: #fff;
+	box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.05);
+	border-radius: 6px;
+	text-align: center;
+}
+
+.dm-uploader .btn {
+	font-size: 16px;
+	line-height: 21px;
+	font-weight: 500;
+	color: #64B0C7;
+	min-width: 280px;
+	height: 64px;
+	padding: 20px 20px 23px;
+	margin: 0 10px;
+	text-align: center;
+	text-transform: uppercase;
+	background: none;
+	border: 1px solid #64B0C7;
+	border-radius: 6px;
+	position: relative;
+	z-index: 1;
+}
+
+.dm-uploader .btn:after {
+	z-index: -1;
+}
+
+.dm-uploader.active {
+	border-color: red;
+	border-style: solid;
+}
+
+.dm-uploader .btn input[type=file] {
+	height: 64px;
+}
+.card {
+	border: 1px solid #8F8F8F;
+	box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.05);
+	border-radius: 6px;
+}
+
+.card-header:first-child {
+	border-radius: 6px 6px 0 0;
+}
+
+@import url(login.css);

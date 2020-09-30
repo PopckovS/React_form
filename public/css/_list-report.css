@@ -1,0 +1,487 @@
+.top-box-info {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 0 32px;
+}
+.top-box-info .link-back {
+    width: 46px;
+    height: 46px;
+    display: block;
+    margin: 0 31px 0 0;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+}
+.top-box-info .link-back:after {
+    content:'';
+    display:block;
+    clear:both;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 46px;
+    height: 46px;
+    border: 2px solid #92A9AF;
+    opacity: 0;
+    -webkit-transition:  opacity .2s ease-in-out;
+    -moz-transition:  opacity .2s ease-in-out;
+    -ms-transition:  opacity .2s ease-in-out;
+    -o-transition:  opacity .2s ease-in-out;
+    transition:  opacity .2s ease-in-out;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}
+.top-box-info .link-back:hover:after {
+    opacity: 1;
+}
+.top-box-info .title-h1 {
+    font-weight: normal !important;
+    font-size: 32px;
+    line-height: 42px;
+    color: #000;
+    margin: 0;
+    display: block;
+    flex: 1 0 auto;
+}
+.top-box-info .title-h1.center-text {
+    text-align: center;
+    padding-right: 38px;
+
+}
+.holder-info-add {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin: 0 0 17px;
+}
+.holder-info-add .holder-date {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 10px 20px;
+    margin: 15px 15px 0 0;
+    background-color: #fff;
+    color: #8C9BA6;
+    font-size: 16px;
+    line-height: 21px;
+    -webkit-border-radius: 100px;-moz-border-radius: 100px;border-radius: 100px;
+    -webkit-box-shadow:  0px 2px 16px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow:  0px 2px 16px rgba(0, 0, 0, 0.05);
+    box-shadow:  0px 2px 16px rgba(0, 0, 0, 0.05);
+}
+.holder-filter-brand, .holder-filter-provider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 15px 0 0;
+}
+.holder-info-add .holder-date .date-info {
+    font-size: 14px;
+    color: #000;
+}
+.holder-info-add .holder-date .space {
+    margin: 0 8px;
+}
+.holder-info-add .holder-date input {
+    height: 22px;
+    width: 100px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.holder-info-add .text-grey{
+    margin: 0 12px 0 0;
+}
+.button-add  .button.add,
+.button-log  .button.log,
+.button-zip  .button.zip,
+.button-xls  .button.xls{
+    background: #fff;
+    color: #8C9BA6;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 17px 56px 17px 22px;
+    border: 2px solid #fff;
+    display: inline-block;
+    -webkit-border-radius: 100px;-moz-border-radius: 100px;border-radius: 100px;
+    -webkit-box-shadow:  0px 2px 16px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow:  0px 2px 16px rgba(0, 0, 0, 0.05);
+    box-shadow:  0px 2px 16px rgba(0, 0, 0, 0.05);
+    position: relative;
+    text-transform: uppercase;
+    height: auto;
+    width: auto;
+    background-image: none;
+    -webkit-transition: border-color .2s ease-in-out;
+    -moz-transition: border-color .2s ease-in-out;
+    -ms-transition: border-color .2s ease-in-out;
+    -o-transition: border-color .2s ease-in-out;
+    transition: border-color .2s ease-in-out;
+}
+.button-edit .button.edit{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    color: #8C9BA6;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 15px 15px;
+    border: 2px solid #fff;
+    display: inline-block;
+    -webkit-border-radius: 100px;-moz-border-radius: 100px;border-radius: 100px;
+    -webkit-box-shadow:  0px 2px 16px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow:  0px 2px 16px rgba(0, 0, 0, 0.05);
+    box-shadow:  0px 2px 16px rgba(0, 0, 0, 0.05);
+    position: relative;
+    text-transform: uppercase;
+    height: auto;
+    width: auto;
+    background-image: none;
+    -webkit-transition: border-color .2s ease-in-out;
+    -moz-transition: border-color .2s ease-in-out;
+    -ms-transition: border-color .2s ease-in-out;
+    -o-transition: border-color .2s ease-in-out;
+    transition: border-color .2s ease-in-out;
+}
+.button-add  .button.add:hover,
+.button-log  .button.log:hover,
+.button-zip  .button.zip:hover,
+.button-xls  .button.xls:hover,
+.button-edit .button.edit:hover{
+    background-image: none;
+    background: #fff;
+    border-color: #64B0C7;
+    text-decoration: none;
+    cursor: pointer;
+}
+.button-add  .button.add:after,
+.button-log  .button.log:after,
+.button-zip  .button.zip:after,
+.button-xls  .button.xls:after{
+    content:'';
+    display:block;
+    clear:both;
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    width: 18px;
+    height: 18px;
+    margin: -9px 0 0;
+}
+.button-add .button.add:after {
+    background: url("../images/add.svg") 50% 50% no-repeat;
+}
+.button-log .button.log:after {
+    background: url("../images/log.svg") 50% 50% no-repeat;
+    background-size: cover;
+}
+.button-zip .button.zip:after {
+    background: url("../images/zip.svg") 50% 50% no-repeat;
+    background-size: cover;
+}
+.button-xls .button.xls:after {
+    background: url("../images/xls.svg") 50% 50% no-repeat;
+    background-size: cover;
+}
+.holder-button {
+    display: flex;
+    align-items: center;
+    margin: 0 -20px;
+}
+.holder-button .button-log,
+.holder-button .button-zup,
+.holder-button .button-xls,
+.holder-button .button-edit{
+    padding: 0 20px;
+}
+.default-table  {
+    margin: 0 0 20px;
+    width: 100%;
+    padding: 0 16px;
+    border-collapse: collapse;
+}
+.table-scroll {
+    overflow-y: auto;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* Scrollbar styles */
+.table-scroll::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.table-scroll::-webkit-scrollbar-track {
+    background: none;
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+    background: #fff;
+    -webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;
+}
+.default-table th {
+    padding: 27px 25px 27px;
+    font-size: 16px;
+    line-height: 23px;
+    color: #8C9BA6;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.default-table td {
+    font-size: 18px;
+    line-height: 23px;
+    vertical-align: middle;
+}
+.default-table tbody .box-shadow {
+    background: #fff;
+    -webkit-box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.05);
+    margin: 0 0 20px;
+    font-size: 18px;
+    line-height: 23px;
+    color: #000;
+    -webkit-border-radius: 6px;-moz-border-radius: 6px;border-radius: 6px;
+}
+.holder-bottom-add {
+    padding: 0  0 16px;
+    text-align: center;
+}
+.default-table tbody .box-shadow td {
+    padding: 21px 25px;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    -webkit-transition:  border-color .2s ease-in-out;
+    -moz-transition:  border-color .2s ease-in-out;
+    -ms-transition:  border-color .2s ease-in-out;
+    -o-transition:  border-color .2s ease-in-out;
+    transition:  border-color .2s ease-in-out;
+}
+.default-table tbody .box-shadow td:first-child {
+    border-left: 2px solid #fff;
+}
+.default-table tbody .box-shadow td:last-child {
+    border-right: 2px solid #fff;
+}
+.default-table tbody .box-shadow:hover td {
+    border-color: #64B0C7;
+}
+.default-table td {
+    background: none;
+    border: none;
+}
+.default-table .small-icon {
+    width: 65px;
+}
+.default-table .small-icon86 {
+    width: 56px;
+    padding: 21px 15px !important;
+}
+.default-table .fake {
+    -webkit-box-shadow:  0 0 0  rgba(0, 0, 0, 0);
+    -moz-box-shadow:  0 0 0  rgba(0, 0, 0, 0);
+    box-shadow:  0 0 0  rgba(0, 0, 0, 0);
+}
+.default-table .fake td {
+    min-height: 12px;
+    padding: 0;
+    line-height: 0;
+    height: 12px;
+    background: none !important;
+}
+.default-table .icon-filter {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin: -4px 0 0;
+    display: inline-block;
+    width: 10px;
+    height: 6px;
+    background: url("../images/filter.svg") 50% 50% no-repeat;
+}
+.default-table  .all-buttons {
+    white-space: nowrap;
+}
+.default-table  .all-buttons a {
+    margin: 0 0 0 10px;
+}
+.default-table  .all-buttons a:first-child {
+    margin: 0;
+}
+.default-table .holder-filter {
+    position: relative;
+    display: inline-block;
+    padding: 0 20px 0 0;
+}
+.default-table .holder-filter.wide-filter {
+    min-width: 105px;
+}
+
+.default-table .active .icon-filter {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.getZip {
+    cursor: pointer;
+}
+
+.default-table a {
+    color: #000;
+}
+.default-table a:hover {
+    text-decoration: underline;
+}
+
+.hold930 {
+    max-width: 930px;
+    margin: 0 auto;
+}
+
+body .ui-widget {
+    font-family: 'IBM Plex Sans', sans-serif !important;
+}
+body .ui-widget-content {
+    background: #fff;
+    border-color: #E0E0E0;
+    -webkit-border-radius: 6px;-moz-border-radius: 6px;border-radius: 6px;
+}
+body .ui-widget-header {
+    background: #fff;
+    border-color: #fff;
+    color: #000;
+    font-size: 16px;
+    line-height: 21px;
+}
+body .ui-datepicker th {
+    color: #8C9BA6;
+    font-size: 16px;
+    line-height: 21px;
+}
+body .ui-datepicker td {
+    background: #fff;
+}
+body .ui-state-default,
+body .ui-widget-content .ui-state-default,
+body .ui-widget-header .ui-state-default {
+    font-size: 16px;
+    line-height: 21px;
+    color: #000;
+    background: #fff;
+    border-color: #fff;
+    width: 32px;
+    height: 32px;
+    -webkit-border-radius: 100px;-moz-border-radius: 100px;border-radius: 100px;
+}
+body .ui-state-default  a,
+body .ui-widget-content .ui-state-default a,
+body .ui-widget-header .ui-state-defaul a {
+    display: block;
+    -webkit-border-radius: 100px;-moz-border-radius: 100px;border-radius: 100px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 32px;
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    text-align: center;
+}
+body .ui-state-active,
+body .ui-widget-content .ui-state-active,
+body .ui-widget-header .ui-state-active {
+    font-size: 16px;
+    line-height: 21px;
+    background: #64B0C7;
+    border-color: #64B0C7;
+    color: #fff;
+    width: 32px;
+    text-align: center;
+    height: 32px;
+    -webkit-border-radius: 100px;-moz-border-radius: 100px;border-radius: 100px;
+}
+body .ui-state-highlight,
+body .ui-widget-content .ui-state-highlight,
+body .ui-widget-header .ui-state-highlight {
+    font-size: 16px;
+    line-height: 25px;
+    background: #64B0C7;
+    border-color: #64B0C7;
+    color: #fff;
+    text-align: center;
+}
+body .ui-datepicker .ui-datepicker-prev,
+body .ui-datepicker .ui-datepicker-next{
+    margin: 0;
+    background: url("../images/left-data.svg") no-repeat 50% 50%;
+    width: 32px;
+    height: 32px;
+    border: 2px solid #fff;
+    -webkit-border-radius: 100px;-moz-border-radius: 100px;border-radius: 100px;
+    -webkit-transition:  border-color .2s ease-in-out;
+    -moz-transition:  border-color .2s ease-in-out;
+    -ms-transition:  border-color .2s ease-in-out;
+    -o-transition:  border-color .2s ease-in-out;
+    transition:  border-color .2s ease-in-out;
+    top: 2px;
+}
+body .ui-datepicker .ui-datepicker-next {
+    background: url("../images/right-data.svg") no-repeat 50% 50%;
+}
+body .ui-datepicker .ui-datepicker-prev:hover,
+body .ui-datepicker .ui-datepicker-next:hover {
+    border-color: #64B0C7;
+}
+body .ui-datepicker .ui-datepicker-prev span,
+body .ui-datepicker .ui-datepicker-next span {
+    display: none;
+}
+body .ui-datepicker .ui-datepicker-next {
+    right: 2px;
+}
+body .ui-datepicker .ui-datepicker-prev {
+    left: 2px;
+}
+
+@media (max-width: 1750px) {
+    .default-table tbody .box-shadow td,
+    .default-table th {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .default-table th,
+    .default-table td {
+        font-size: 14px;
+        line-height: 21px;
+    }
+    .default-table .holder-filter.wide-filter {
+        min-width: 95px;
+    }
+}
+@media (max-width: 1500px) {
+    .default-table tbody .box-shadow td,
+    .default-table th {
+        padding: 18px 14px;
+    }
+}
+@media (max-width: 1350px) {
+    .default-table th {
+        font-size: 14px;
+        line-height: 21px;
+    }
+}

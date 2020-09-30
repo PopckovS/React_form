@@ -1,0 +1,122 @@
+.login-page #wrapper {
+    background: url("../images/bg-login.svg") no-repeat 50% 50%;
+    background-size: cover;
+}
+.login-page #header {
+    border: 0;
+}
+.holder-login {
+    width: 660px;
+    background: #fff;
+    -webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;
+    padding: 82px 160px;
+}
+.holder-login h1 {
+    margin: 0 0 43px;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: normal;
+}
+.holder-login form input[type="text"],
+.holder-login form input[type="email"],
+.holder-login form input[type="password"]{
+    box-sizing: border-box;
+    -webkit-border-radius: 6px;-moz-border-radius: 6px;border-radius: 6px;
+    font-size: 18px;
+    line-height: 23px;
+    padding: 20px 26px 19px;
+    -webkit-appearance: none;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    height: auto;
+    font-family: 'IBM Plex Sans', sans-serif;
+    -webkit-transition:  border-color .2s ease-in-out;
+    -moz-transition:  border-color .2s ease-in-out;
+    -ms-transition:  border-color .2s ease-in-out;
+    -o-transition:  border-color .2s ease-in-out;
+    transition:  border-color .2s ease-in-out;
+}
+
+.holder-login form.auth-form {
+    margin-bottom: 17px;
+    padding: 6px 0 6px;
+}
+
+.holder-login .btn,
+form.auth-form .btn {
+    border: 1px solid #64B0C7;
+    padding: 20px 26px 19px;
+    color: #64B0C7;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    outline: 0 none;
+    box-shadow: none;
+    text-decoration: none;
+    -webkit-appearance: none;
+    background: #fff;
+    height: auto;
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-transform: uppercase;
+}
+form.auth-form .btn {
+    width: 100%;
+    padding: 20px 20px 21px;
+}
+.holder-login .btn:hover,
+form.auth-form .btn:hover {
+    border: 2px solid #64B0C7;
+    padding: 19px 20px 20px;
+}
+.holder-login .block-for {
+    margin: 0 0 30px;
+}
+.holder-login label {
+    display: block;
+    margin: 0 0 12px;
+    color: #B1B4B3;
+    font-size: 17px;
+    line-height: 22px;
+}
+.holder-login .block-link {
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    line-height: 22px;
+    color: #B1B4B3;
+    justify-content: space-between;
+    margin: -10px 0 34px;
+}
+.holder-login .list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    color: #B1B4B3;
+    font-size: 17px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+}
+.holder-login .list a {
+    color: #64B0C7;
+}
+.holder-login .block-form {
+    margin: 0 0 30px;
+}
+.holder-login .cl-5 {
+    margin: 0 5px;
+}
+.login-page #main {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: calc(100vh - 203px);
+    min-height: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

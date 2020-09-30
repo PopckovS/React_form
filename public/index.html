@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title> Statistic Management</title>
+    <link rel="stylesheet" type="text/css" href="js/jgrowl/jquery.jgrowl.min.css">
+    <link rel="stylesheet" href="css/style.css" media="all"/>
+    <link rel="stylesheet" href="js/jquery-ui-1.10.4.custom.css" media="all"/>
+    <link rel="stylesheet" href="js/jquery-ui-timepicker-addon.css" media="all"/>
+    <link rel="stylesheet" href="js/select2/select2.css" media="all"/>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css" media="all"/>
+
+
+    <!-- Для files Uploader -->
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+          integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+    <!-- TODO ЧТО-ТО НЕ ТАК С ПУТЯМИ К ЭТОМУ ФАЙЛУ -->
+<!--    <link href="js/jquery.dm-uploader.min.css" rel="stylesheet">-->
+
+    <link href="css/styles.css" rel="stylesheet">
+    <!-- Конец files Uploader -->
+
+    <link rel="stylesheet" href="js/jodit-3.4.1/build/jodit.min.css">
+
+
+
+    <style>
+        @media print {
+            .more {
+                /*page-break-before: always;*/
+                page-break-after: always;
+            }
+
+            .noprint {
+                display: none;
+            }
+
+            .holder {
+                /*font-size: 16px;*/
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+
+
+
+<!-- Обертка -->
+<div id="wrapper">
+    <div class="w1">
+
+        <!-- Шапка сайта -->
+        <header id="header" class="noprint">
+            <div class="holder">
+                <strong class="logo"><a href="/">Statistic Management</a></strong>
+                <ul class="top-left">
+                </ul>
+            </div>
+        </header>
+
+        <!-- Хлебные крошки -->
+        <div class="breadcrumbs-hold">Главная » Договоры » Генерация для договора</div>
+
+
+       <!-- Вид -->
+        <div id="main">
+            <div class="holder">
+                <h3>Генерация отчетной документации "Название отчета"</h3>
+            </div>
+
+            <!-- ============================= Главный Блок  =============================== -->
+            <div class="holder">
+                <div class="hold930">
+
+                    <div class="top-box-info">
+                        <a href="/contracts" class="link-back">
+                            <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.2924 22.2929C12.9019 22.6834 12.9019 23.3166 13.2924 23.7071L19.6564 30.0711C20.0469 30.4616 20.6801 30.4616 21.0706 30.0711C21.4611 29.6805 21.4611 29.0474 21.0706 28.6569L15.4137 23L21.0706 17.3431C21.4611 16.9526 21.4611 16.3195 21.0706 15.9289C20.6801 15.5384 20.0469 15.5384 19.6564 15.9289L13.2924 22.2929ZM31.9995 22L13.9995 22L13.9995 24L31.9995 24L31.9995 22Z" fill="#92A9AF"/></svg>
+                        </a>
+                        <strong class="title-h1">Генерация отчетной документации</strong>
+                    </div>
+                    <div class="holder-form" id="root">
+
+                        <!-- Сюда подключается React приложение -->
+<!--                        <div id="root"></div>-->
+                        <!-- ================================== -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ============================================================================== -->
+
+</div>
+
+
+
+
+<!-- Футтер -->
+<footer id="footer" class="noprint">
+    <div class="holder">
+        <p>Statistic management @ 2020</p>
+    </div>
+</footer>
+
+<!-- Модальное окно -->
+<div class="modal modal-small noprint" id="dell">
+    <a class="close" href="/">close</a>
+    <strong class="title">Удаление записи</strong>
+    <p>Запись будет удалена безвозвратно.</p>
+    <div class="button-new">
+        <a class="btn btn-red confirm-delete" href="#">Удалить</a>
+        <a class="btn cancel-delete" href="#">Отменить</a>
+    </div>
+</div>
+
+
+
+    <!-- =============================================== -->
+    <!-- =============================================== -->
+
+<!--    <script type="text/javascript">-->
+<!--        var $imagesPath = '<?= $this->imagesPath ?>';-->
+<!--    </script>-->
+<!--    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>-->
+<!--    <script type="text/javascript" src="js/validator/validate.js"></script>-->
+<!--    <script type="text/javascript" src="js/validator/validate.ext.js"></script>-->
+<!--    <script type="text/javascript" src="js/jquery.form.js"></script>-->
+<!--    <script type="text/javascript" src="js/jgrowl/jquery.jgrowl.min.js"></script>-->
+<!--    <script type="text/javascript" src="js/jquery-ui-1.10.4.custom.js"></script>-->
+<!--    <script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>-->
+<!--    <script type="text/javascript" src="js/select2/select2.js"></script>-->
+<!--    &lt;!&ndash;[if lte IE 8]>-->
+<!--    <script type="text/javascript" src="js/PIE.js"></script>-->
+<!--    <script type="text/javascript" src="js/modernizr-1.7.min.js"></script>-->
+<!--    <script type="text/javascript" src="js/for-ie.js"></script>-->
+<!--    <![endif]&ndash;&gt;-->
+<!--    <script type="text/javascript" src="js/jquery.main.js"></script>-->
+<!--    <script type="text/javascript" src="js/admin.js"></script>-->
+<!--    <script type="text/javascript" src="js/scripts.js"></script>-->
+
+<!--    &lt;!&ndash; Скрипты для проверки формы перед отправкой &ndash;&gt;-->
+<!--    <script type="text/javascript" src="js/ajax-forms.js"></script>-->
+<!--    <script type="text/javascript" src="js/contracts.js"></script>-->
+
+
+    <!-- =============================================== -->
+    <!-- =============================================== -->
+
+
+
+</body>
+</html>
