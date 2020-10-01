@@ -1,15 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import Form from "./Form";
+import FormContract from "./Form1/FormContract";
 
 import * as serviceWorker from './serviceWorker';
+
 
 
 /** Рендер основного компонента */
 ReactDOM.render(
   <React.StrictMode>
-    <Form />
+
+        {/** Подключаем форма отправки  */}
+        <FormContract />
+
   </React.StrictMode>,
   document.getElementById('root')
 );
