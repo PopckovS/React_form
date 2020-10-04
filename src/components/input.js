@@ -12,7 +12,7 @@ function Input(props)
                id={props.name}
                name={props.name}
                value={props.value}
-               placeholder = {props.placeholder}
+               placeholder={props.placeholder}
                onChange={props.handleChange}
         />
     );

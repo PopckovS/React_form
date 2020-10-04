@@ -1,5 +1,6 @@
 import React from 'react';
-import Form from "./Form1/FormContract";
+import Form1 from "./Form1/FormContract1";
+import FormContract2 from "./Form2/FormContract2";
 
 
 /** Основной Компонент, запускает отображение формы отправки */
@@ -14,7 +15,7 @@ class App extends React.Component{
             </div>
 
             {/** Подключаем форма отправки  */}
-            <Form/>
+            <FormContract2 />
 
           </div>
       );

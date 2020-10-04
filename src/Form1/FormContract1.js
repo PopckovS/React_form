@@ -7,7 +7,7 @@ import FormParent from "./FormParent";
  * В этом классе мы инициалтзируем только начальные данные для длявных полей формы,
  * которые общие для любого типа договора, все отчальные поля генерятся в родительском классе.
  */
-class FormContract extends FormParent
+class FormContract1 extends FormParent
 {
     constructor(props)
     {
@@ -69,4 +69,4 @@ class FormContract extends FormParent
 
 }
 
-export default FormContract
+export default FormContract1
