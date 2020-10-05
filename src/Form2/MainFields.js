@@ -58,11 +58,11 @@ function MainFields()
 
 
     /** Обработчик ввода поля Input */
-    const handleInput = (event) => {
+    const handleInput = React.useCallback((event) => {
         const {name, value} = event.currentTarget;
         setFormInputState({...formInputState, [name]: value});
         showState(formInputState, formSelectState);
-    };
+    }, [setFormInputState, formInputState]);
 
 
     /** Обработчик поля elect */
@@ -71,6 +71,8 @@ function MainFields()
         setFormSelectState({...formSelectState, [name]:value});
         showState(formInputState, formSelectState);
     };
+
+
 
 
     /** Выбираем дополнительные поля */
@@ -105,6 +107,7 @@ function MainFields()
             </React.Fragment>
         );
     }
+
 
 
 
