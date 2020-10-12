@@ -21,4 +21,4 @@ function Fields4(props)
     );
 }
 
-export default Fields4;
+export default React.memo(Fields4);
