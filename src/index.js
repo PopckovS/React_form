@@ -3,20 +3,32 @@ import ReactDOM from 'react-dom';
 import FormContract1 from "./Form1/FormContract1";
 import FormContract2 from "./Form2/FormContract2";
 
-import * as serviceWorker from './serviceWorker';
+import Content_1 from "./Content/Content_1";
+import Content_2 from "./Content_2/Content_2";
 
+import * as serviceWorker from './serviceWorker';
 
 
 /** Рендер основного компонента */
 ReactDOM.render(
   <React.StrictMode>
 
+        {/** Подключаем Контен */}
+        {/*<Content_1 name={"Главный контент"}/>*/}
+
+
+        {/** Подключаем Тестовую форму */}
+        <Content_2 title={"Тестовая форма отправки"}/>
+
+
         {/** Подключаем форма отправки  */}
-        <FormContract2 />
+        {/*<FormContract2 />*/}
 
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+serviceWorker.unregister();
 
 /** =========================== Классы и Хуки ===========================
  В классах для обновления состояния я использую метод this.setState(Сюда передаются значения)
@@ -53,4 +65,4 @@ ReactDOM.render(
 
  */
 
-serviceWorker.unregister();
+
