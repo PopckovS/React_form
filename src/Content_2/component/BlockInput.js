@@ -12,14 +12,29 @@ import Error from "../component/Error";
 function BlockInput(props)
 {
 
+    console.log(props);
+    // if(props.error !== "undefined"){
+    //     const errorLabel = () =>{
+    //
+    //     }
+    // }
+
     return(
             <div className="hold-input">
 
-                <label htmlFor={props.name}>{props.title}</label>
+                <label htmlFor={props.name}>
+                     {props.title}
+                </label>
 
-                <Input name={props.name} value={props.value} handleChange={props.handleChange}/>
+                <Input name={props.name}
+                       value={props.value}
+                       handleChange={props.handleChange}
+                />
 
-                <Error name={props.name} text={"Это поле необходимо заполнить."} class={"error-validate"}/>
+                <Error name={props.name}
+                       text={props.error}
+                       class={"error-validate"}
+                />
 
             </div>
     );

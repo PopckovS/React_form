@@ -26,16 +26,64 @@ function Content_2(props)
     /** Установка состояния */
     const [formState, setFormState] = useState(InitialState);
 
+    /** Финальный массив с ошибками */
+    const [ErrorSubmit, setErrorSubmit] = useState({});
+
+
 
     /** Функцуия обработки состояний */
     const handleChange = (event) => {
-        /** Используем функцию обновления состояния */
-        setFormState({
-            ...formState, /** Копируем старый обьект */
-            [event.target.name]: event.target.value /** Заменяем только то значение что было изменено */
-        });
-        console.log(formState);
+        let name = event.target.name;
+        let value = event.target.value;
+
+        setFormState({...formState, [name]: value});
+
+        validationField(name,value);
     };
+
+
+    /** Функция валидации полей */
+    const validationField = (name, value) => {
+        console.log('===== Состояние обьекта валидации =====');
+        console.log(name);
+        console.log(ErrorState[name]);
+
+        if(ErrorState[name].type === 'text'){
+            validationText(name, value);
+        }
+        if(ErrorState[name].type === 'number'){
+            validationNumber(name, value);
+        }
+        if(ErrorState[name].noEmpty == true){
+            validationNoEmpty(name, value);
+        }
+
+        console.log('================ СПИСОК ОШИБОК ================');
+        console.log(ErrorSubmit);
+        console.log('================================');
+    }
+
+
+    /** Проверка на строку */
+    const validationText = (name, value) =>{
+        if ((typeof value) !== 'string'){
+            setErrorSubmit({...ErrorSubmit, [name]: 'Это поле должно быть строкой.'});
+        }
+    }
+
+    /** Проверка на число */
+    const validationNumber = (name, value) =>{
+        if (isNaN(value)){
+            setErrorSubmit({...ErrorSubmit, [name]: 'Это поле должно быть числом.'});
+        }
+    }
+
+    /** Проверка на пустоту */
+    const validationNoEmpty = (name, value) =>{
+        if(typeof value === "undefined" || value === null || value ===  ""){
+            setErrorSubmit({...ErrorSubmit, [name]: 'Это поле необходимо заполнить.'});
+        }
+    }
 
 
     /** Рендер самой формы */
@@ -48,34 +96,34 @@ function Content_2(props)
 
                     <ul className="row">
                         <li>
-                            <BlockInput title={"Название"} name={"name"} value={formState.name} handleChange={handleChange} />
+                            <BlockInput error={ErrorSubmit.name} title={"Название"} name={"name"} value={formState.name} handleChange={handleChange} />
                         </li>
                         <li>
-                            <BlockInput title={"Адресс"} name={"adress"} value={formState.adress} handleChange={handleChange} />
-                        </li>
-                    </ul>
-
-                    <ul className="row">
-                        <li>
-                            <BlockInput title={"Дата"} name={"date"} value={formState.date} handleChange={handleChange} />
-                        </li>
-                        <li>
-                            <BlockInput title={"ID онтракта"} name={"contractor_id"} value={formState.contractor_id} handleChange={handleChange} />
+                            <BlockInput error={ErrorSubmit.adress} title={"Адресс"} name={"adress"} value={formState.adress} handleChange={handleChange} />
                         </li>
                     </ul>
 
                     <ul className="row">
                         <li>
-                            <BlockInput title={"Исполнитель"} name={"hirer_id"} value={formState.hirer_id} handleChange={handleChange} />
+                            <BlockInput error={ErrorSubmit.date} title={"Дата"} name={"date"} value={formState.date} handleChange={handleChange} />
                         </li>
                         <li>
-                            <BlockInput title={"Цена"} name={"price"} value={formState.price} handleChange={handleChange} />
+                            <BlockInput error={ErrorSubmit.contractor_id} title={"ID онтракта"} name={"contractor_id"} value={formState.contractor_id} handleChange={handleChange} />
                         </li>
                     </ul>
 
                     <ul className="row">
                         <li>
-                            <BlockInput title={"ID Платежа"} name={"payment_id"} value={formState.payment_id} handleChange={handleChange} />
+                            <BlockInput error={ErrorSubmit.hirer_id} title={"Исполнитель"} name={"hirer_id"} value={formState.hirer_id} handleChange={handleChange} />
+                        </li>
+                        <li>
+                            <BlockInput error={ErrorSubmit.price} title={"Цена"} name={"price"} value={formState.price} handleChange={handleChange} />
+                        </li>
+                    </ul>
+
+                    <ul className="row">
+                        <li>
+                            <BlockInput error={ErrorSubmit.payment_id} title={"ID Платежа"} name={"payment_id"} value={formState.payment_id} handleChange={handleChange} />
                         </li>
                     </ul>
 

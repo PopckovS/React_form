@@ -7,18 +7,18 @@ import Error from "../component/Error";
  * @returns {JSX.Element} */
 function BlockSelect(props)
 {
-    /** Перебираю значения, формирую option для Select */
-    const options = props.options;
+    // console.log('===== Select '+ props.name + ' =====');
+    // console.log(props.options);
 
-    console.log(options);
-
-    const listOptions = options.map((option) =>
+    /** Формируем опции для поля Select */
+    const listOptions = props.options.map((option) =>
         <option
             value={option.value}
             key={option.value}
         >
             {option.title}
         </option>);
+
 
     return(
         <div className="hold-input">
