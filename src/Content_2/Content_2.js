@@ -13,6 +13,7 @@ import ErrorState from "./ErrorState";
 /** Компоненты */
 import Input from "./component/Input";
 import Error from "./component/Error";
+
 import BlockInput from "./component/BlockInput";
 import BlockSelect from "./component/BlockSelect";
 
@@ -42,7 +43,7 @@ function Content_2(props)
     };
 
 
-    /** Функция валидации полей */
+    /** Функция запуска валидации полей */
     const validationField = (name, value) => {
         console.log('===== Состояние обьекта валидации =====');
         console.log(name);
@@ -60,7 +61,7 @@ function Content_2(props)
 
         console.log('================ СПИСОК ОШИБОК ================');
         console.log(ErrorSubmit);
-        console.log('================================');
+        console.log('===============================================');
     }
 
 
@@ -68,6 +69,8 @@ function Content_2(props)
     const validationText = (name, value) =>{
         if ((typeof value) !== 'string'){
             setErrorSubmit({...ErrorSubmit, [name]: 'Это поле должно быть строкой.'});
+        }else{
+            delete ErrorSubmit[name];
         }
     }
 
@@ -75,6 +78,8 @@ function Content_2(props)
     const validationNumber = (name, value) =>{
         if (isNaN(value)){
             setErrorSubmit({...ErrorSubmit, [name]: 'Это поле должно быть числом.'});
+        }else{
+            delete ErrorSubmit[name];
         }
     }
 
@@ -82,6 +87,21 @@ function Content_2(props)
     const validationNoEmpty = (name, value) =>{
         if(typeof value === "undefined" || value === null || value ===  ""){
             setErrorSubmit({...ErrorSubmit, [name]: 'Это поле необходимо заполнить.'});
+        }else{
+            delete ErrorSubmit[name];
+        }
+    }
+
+
+    /** Проверка всей формы перед отправкой */
+    const handleSumbit = (event) =>{
+        console.log('======================= ФОРМА ОТПРАВКИ ========================');
+        console.log(ErrorSubmit);
+        console.log('===============================================');
+
+        /** Если есть ошибки то остановка работы */
+        if (Object.keys(ErrorSubmit).length != 0) {
+            event.preventDefault();
         }
     }
 
@@ -90,44 +110,80 @@ function Content_2(props)
     return(
         <React.Fragment>
             <h4>{props.title}</h4>
-            <form>
+            <form onSubmit={handleSumbit}>
 
                 <fieldset>
 
+                    {/** ================ Первый ряд ================ */}
                     <ul className="row">
                         <li>
-                            <BlockInput error={ErrorSubmit.name} title={"Название"} name={"name"} value={formState.name} handleChange={handleChange} />
+                            <BlockInput  title={"Название"} name={"name"}
+                                         value={formState.name}
+                                         handleChange={handleChange}
+                                         error={ErrorSubmit.name}
+                            />
                         </li>
                         <li>
-                            <BlockInput error={ErrorSubmit.adress} title={"Адресс"} name={"adress"} value={formState.adress} handleChange={handleChange} />
-                        </li>
-                    </ul>
-
-                    <ul className="row">
-                        <li>
-                            <BlockInput error={ErrorSubmit.date} title={"Дата"} name={"date"} value={formState.date} handleChange={handleChange} />
-                        </li>
-                        <li>
-                            <BlockInput error={ErrorSubmit.contractor_id} title={"ID онтракта"} name={"contractor_id"} value={formState.contractor_id} handleChange={handleChange} />
-                        </li>
-                    </ul>
-
-                    <ul className="row">
-                        <li>
-                            <BlockInput error={ErrorSubmit.hirer_id} title={"Исполнитель"} name={"hirer_id"} value={formState.hirer_id} handleChange={handleChange} />
-                        </li>
-                        <li>
-                            <BlockInput error={ErrorSubmit.price} title={"Цена"} name={"price"} value={formState.price} handleChange={handleChange} />
-                        </li>
-                    </ul>
-
-                    <ul className="row">
-                        <li>
-                            <BlockInput error={ErrorSubmit.payment_id} title={"ID Платежа"} name={"payment_id"} value={formState.payment_id} handleChange={handleChange} />
+                            <BlockInput  title={"Адресс"} name={"adress"}
+                                         value={formState.adress}
+                                         handleChange={handleChange}
+                                         error={ErrorSubmit.adress}
+                            />
                         </li>
                     </ul>
 
 
+                    {/** ================ Второй ряд ================ */}
+                    <ul className="row">
+                        <li>
+                            <BlockInput  title={"Дата"} name={"date"}
+                                         value={formState.date}
+                                         handleChange={handleChange}
+                                         error={ErrorSubmit.date}
+                            />
+                        </li>
+                        <li>
+                            <BlockInput  title={"ID онтракта"} name={"contractor_id"}
+                                         value={formState.contractor_id}
+                                         handleChange={handleChange}
+                                         error={ErrorSubmit.contractor_id}
+                            />
+                        </li>
+                    </ul>
+
+
+                    {/** ================ Третий ряд ================ */}
+                    <ul className="row">
+                        <li>
+                            <BlockInput  title={"Исполнитель"} name={"hirer_id"}
+                                         value={formState.hirer_id}
+                                         handleChange={handleChange}
+                                         error={ErrorSubmit.hirer_id}
+                            />
+                        </li>
+                        <li>
+                            <BlockInput  title={"Цена"} name={"price"}
+                                         value={formState.price}
+                                         handleChange={handleChange}
+                                         error={ErrorSubmit.price}
+                            />
+                        </li>
+                    </ul>
+
+
+                    {/** ================ Четвертый ряд ================ */}
+                    <ul className="row">
+                        <li>
+                            <BlockInput  title={"ID Платежа"} name={"payment_id"}
+                                         value={formState.payment_id}
+                                         handleChange={handleChange}
+                                         error={ErrorSubmit.payment_id}
+                            />
+                        </li>
+                    </ul>
+
+
+                    {/** ================ Пятый ряд ================ */}
                     <ul className="row">
                         <li>
                             <BlockSelect
@@ -153,12 +209,12 @@ function Content_2(props)
                         </li>
                     </ul>
 
-
                 </fieldset>
 
 
-
-                <button>Отправить</button>
+                <button>
+                    Отправить
+                </button>
 
             </form>
         </React.Fragment>
